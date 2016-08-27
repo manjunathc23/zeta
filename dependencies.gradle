@@ -2,7 +2,7 @@ ext.versions = [
         compileSdk                     : 24,
         minSdk                         : 15,
         targetSdk                      : 23,
-        buildTools                     : "24.0.1",
+        buildTools                     : "24.0.2",
 
         supportLibVersion              : "24.1.1",
         playServicesVersion            : "9.4.0",
@@ -53,7 +53,7 @@ ext.versions = [
         supportTestVersion             : "0.4.1",
         espressoVersion                : '2.2.1',
 
-        gradlePluginVersion            : "2.1.2",
+        gradlePluginVersion            : "2.1.3",
         aptToolsPluginVersion          : "1.8",
         retroLambdaPluginVersion       : "3.2.5",
         retrolombokPluginVersion       : "0.2.3.a2",
