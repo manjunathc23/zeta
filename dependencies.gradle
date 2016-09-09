@@ -144,16 +144,16 @@ ext.libraries = [
 
         //region TESTING DEPENDENCIES
         junit                   : "junit:junit:$versions.junitVersion",
-        robolectric             : "org.robolectric:robolectric:$versions.robolectricVersion",
         assertJ                 : "org.assertj:assertj-core:$versions.assertJVersion",
         equalsVerifier          : "nl.jqno.equalsverifier:equalsverifier:$versions.equalsVerifierVersion",
-        okHttpMockWebServer     : "com.squareup.okhttp3:mockwebserver:$versions.okHttp3Version",
         mockitoCore             : "org.mockito:mockito-core:$versions.mockitoVersion",
         retrofitMock            : "com.squareup.retrofit2:retrofit-mock:$versions.retrofitVersion",
+        okHttpMockWebServer     : "com.squareup.okhttp3:mockwebserver:$versions.okHttp3Version",
         supportTestRunner       : "com.android.support.test:runner:$versions.supportTestRunnerVersion",
         supportTestRules        : "com.android.support.test:rules:$versions.supportTestRunnerVersion",
-        dexmakerMockito         : "com.google.dexmaker:dexmaker-mockito:$versions.dexmakerVersion",
         dexmaker                : "com.google.dexmaker:dexmaker:$versions.dexmakerVersion",
+        dexmakerMockito         : "com.google.dexmaker:dexmaker-mockito:$versions.dexmakerVersion",
+        robolectric             : "org.robolectric:robolectric:$versions.robolectricVersion",
         espressoCore            : "com.android.support.test.espresso:espresso-core:$versions.espressoVersion",
         espressoContrib         : "com.android.support.test.espresso:espresso-contrib:$versions.espressoVersion",
         //endregion

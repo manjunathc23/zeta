@@ -13,8 +13,8 @@ android {
 
     defaultConfig {
         applicationId "zeta.andriod.apps"
-        minSdkVersion 16
-        targetSdkVersion 24
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
         versionCode 3
         versionName "1.0.3"
         multiDexEnabled true
