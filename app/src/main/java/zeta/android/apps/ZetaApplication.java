@@ -9,7 +9,7 @@ import javax.inject.Inject;
 import dagger.Lazy;
 import rx.plugins.RxJavaHooks;
 import zeta.android.apps.modules.ZetaAppModule;
-import zeta.android.apps.rx.RxErrorHandler2;
+import zeta.android.apps.rx.RxErrorHandler;
 import zeta.android.apps.tools.DeveloperTools;
 
 @ParametersAreNonnullByDefault
@@ -36,7 +36,7 @@ public class ZetaApplication extends MultiDexApplication {
         mDeveloperTools.get().initialize(this);
 
         //Just to log the Rx Global errors.
-        RxJavaHooks.setOnError(new RxErrorHandler2());
+        RxJavaHooks.setOnError(new RxErrorHandler());
     }
 
     @Override

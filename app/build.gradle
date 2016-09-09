@@ -165,8 +165,10 @@ dependencies {
     provided libraries.autoValue
     apt libraries.autoValueParcel
 
-    //UI
-    compile libraries.stickyHeaderRecyclerView
+    //Zeta
+    compile libraries.zetaUtils
+    compile libraries.zetaListItemDivider
+    compile libraries.zetaHeaderAndFooterAdapters
 
     //DEVELOPER TOOLS
     compile libraries.timber

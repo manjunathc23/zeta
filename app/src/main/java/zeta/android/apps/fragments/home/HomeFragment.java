@@ -34,15 +34,30 @@ import zeta.apps.flickr.modules.FlickrImageModule;
 
 @ParametersAreNonnullByDefault
 public class HomeFragment extends BaseNavigationFragment implements HomePresentation {
-
     private static final String ARG_HOME_SAVED_STATE_PRESENTER = "ARG_HOME_SAVED_STATE_PRESENTER";
-    @Inject
-    HomePresenter mPresenter;
+
     private Views mViews;
-    private LinearLayoutManager mListLayoutManager;
     private FlickrHomeAdapter mListViewAdapter;
+    private LinearLayoutManager mListLayoutManager;
+
     //Saved data
     private Parcelable mSavedState;
+
+    @Inject
+    HomePresenter mPresenter;
+
+    static class Views extends BaseViews {
+
+        @Bind(R.id.zeta_progress_bar)
+        ProgressBar progressBar;
+
+        @Bind(R.id.zeta_list_view)
+        RecyclerView listView;
+
+        Views(View root) {
+            super(root);
+        }
+    }
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -121,12 +136,12 @@ public class HomeFragment extends BaseNavigationFragment implements HomePresenta
 
     @Override
     public void showListViewFooter(boolean show) {
-        mListViewAdapter.showFooterProgress(show);
+        //Do nothing
     }
 
     @Override
     public void showListViewFooterRetry(boolean show) {
-        mListViewAdapter.showFooterRetry(show);
+        //Do nothing
     }
 
     @Override
@@ -163,18 +178,7 @@ public class HomeFragment extends BaseNavigationFragment implements HomePresenta
                 .build();
     }
 
-    static class Views extends BaseViews {
 
-        @Bind(R.id.zeta_progress_bar)
-        ProgressBar progressBar;
-
-        @Bind(R.id.zeta_list_view)
-        RecyclerView listView;
-
-        Views(View root) {
-            super(root);
-        }
-    }
     //endregion
 
     //region listeners
