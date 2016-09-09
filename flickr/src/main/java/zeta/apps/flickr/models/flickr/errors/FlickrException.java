@@ -19,25 +19,25 @@ public class FlickrException extends BaseException {
         super(errorCodeAndParam);
     }
 
-    @PrzError
     @NonNull
     @Override
+    @FlickrError
     public String getErrorCode() {
         if (errorCode == null) {
-            return PrzError.UNKNOWN;
+            return FlickrError.UNKNOWN;
         }
 
         switch (errorCode) {
-            case PrzError.NO_IMAGES_FOUND:
-                return PrzError.NO_IMAGES_FOUND;
+            case FlickrError.NO_IMAGES_FOUND:
+                return FlickrError.NO_IMAGES_FOUND;
             default:
-                return PrzError.UNKNOWN;
+                return FlickrError.UNKNOWN;
         }
     }
 
     @Retention(RetentionPolicy.SOURCE)
-    @StringDef({PrzError.NO_IMAGES_FOUND, PrzError.UNKNOWN})
-    public @interface PrzError {
+    @StringDef({FlickrError.NO_IMAGES_FOUND, FlickrError.UNKNOWN})
+    public @interface FlickrError {
         String NO_IMAGES_FOUND = "no images found";
         String UNKNOWN = "UNKNOWN";
     }
